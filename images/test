@@ -1,0 +1,36 @@
+<div class="columns">
+    <ul class="price">
+      <li class="header" style="background-color:#8a8a8a;">Algemene Reparatie</li>
+      <li class="grey">V.a € 29.99,-</li>
+      <li>Binnen 14 dagen klaar</li>
+      <li>24/7 bereikbaar voor afspraken</li>
+      <li>Niet goed geld terug</li>
+      <li>Na afhandeling binnen 24 uur bezorgd</li>
+      <li class="grey"><a href="#" class="button">Maak afspraak</a></li>
+    </ul>
+  </div>
+
+  <div class="columns">
+    <ul class="price">
+      <li class="header" style="background-color:#009688">Consulting</li>
+      <li class="grey">V.a € 79.99,-</li>
+      <li>PC gebouwd binnen 30 minuten</li>
+      <li>24/7 bereikbaar voor afspraken</li>
+      <li>Eigen onderdelen mogelijk</li>
+      <li>Na afhandeling binnen 24 uur bezorgd</li>
+      <li class="grey"><a href="#" class="button">Maak afspraak</a></li>
+    </ul>
+  </div>
+
+  <div class="columns">
+    <ul class="price">
+      <li class="header" style="background-color:#8a8a8a;">Schermreparatie</li>
+      <li class="grey">V.a € 149.99,-</li>
+      <li>Binnen 24 uur klaar</li>
+      <li>24/7 bereikbaar voor afspraken</li>
+      <li>1 jaar garantie op de scherm</li>
+      <li>Na afhandeling binnen 24 uur bezorgd</li>
+      <li class="grey"><a href="#" class="button">Maak afspraak</a></li>
+    </ul>
+    <br>
+  </div>

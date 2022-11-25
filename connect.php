@@ -17,16 +17,15 @@ $DATABASE_NAME = 'bikeshop';
 $DATABASE_PASS = '';
 
 
-$conn = mysqli_connect(
-    hostname: $DATABASE_HOST,
-    username: $DATABASE_USER,
-    password: $DATABASE_PASS,
-    database: $DATABASE_NAME
-);
+$conn = mysqli_connect( hostname: $DATABASE_HOST,
+                        username: $DATABASE_USER,
+                        password: $DATABASE_PASS,
+                        database: $DATABASE_NAME);
 
 if (mysqli_connect_errno()) {
     die("Connection failed" . mysqli_connect_error());
 }
+echo " FUCK YES CONNECTED BITCH";
 
 
 ?>
