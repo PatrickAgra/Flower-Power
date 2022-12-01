@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 29, 2022 at 07:23 PM
+-- Generation Time: Dec 01, 2022 at 02:09 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -83,9 +83,10 @@ CREATE TABLE `factuurregel` (
 
 CREATE TABLE `klanten` (
   `klantcode` int(11) NOT NULL,
-  `voorletters` varchar(255) NOT NULL,
+  `voornaam` varchar(255) NOT NULL,
   `tussenvoegsels` varchar(20) NOT NULL,
   `achternaam` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   `adres` varchar(255) NOT NULL,
   `postcode` varchar(255) NOT NULL,
   `woonplaats` varchar(255) NOT NULL,
@@ -141,12 +142,6 @@ ALTER TABLE `factuur`
   ADD PRIMARY KEY (`factuurnummer`);
 
 --
--- Indexes for table `klanten`
---
-ALTER TABLE `klanten`
-  ADD PRIMARY KEY (`klantcode`);
-
---
 -- Indexes for table `medewerker`
 --
 ALTER TABLE `medewerker`
@@ -173,12 +168,6 @@ ALTER TABLE `artikel`
 --
 ALTER TABLE `factuur`
   MODIFY `factuurnummer` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `klanten`
---
-ALTER TABLE `klanten`
-  MODIFY `klantcode` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `medewerker`
