@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2022 at 02:09 AM
+-- Generation Time: Dec 02, 2022 at 12:52 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -62,6 +62,13 @@ CREATE TABLE `factuur` (
   `klantcode` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `factuur`
+--
+
+INSERT INTO `factuur` (`factuurnummer`, `factuurdatum`, `klantcode`) VALUES
+(1, '2022-12-31', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -69,7 +76,7 @@ CREATE TABLE `factuur` (
 --
 
 CREATE TABLE `factuurregel` (
-  `factuurnummer` int(11) NOT NULL,
+  `factuurnummer` int(255) NOT NULL,
   `artikelcode` int(255) NOT NULL,
   `aantal` int(11) NOT NULL,
   `prijs` decimal(11,0) NOT NULL
@@ -94,6 +101,13 @@ CREATE TABLE `klanten` (
   `gebruikersnaam` varchar(255) NOT NULL,
   `wachtwoord` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `klanten`
+--
+
+INSERT INTO `klanten` (`klantcode`, `voornaam`, `tussenvoegsels`, `achternaam`, `email`, `adres`, `postcode`, `woonplaats`, `geboortedatum`, `gebruikersnaam`, `wachtwoord`) VALUES
+(0, 'Jan', '', 'Pieter', 'JanPieter@gmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2000-01-01', 'Janpieter', '123');
 
 -- --------------------------------------------------------
 
@@ -136,16 +150,40 @@ ALTER TABLE `artikel`
   ADD PRIMARY KEY (`artikelcode`);
 
 --
+-- Indexes for table `bestelling`
+--
+ALTER TABLE `bestelling`
+  ADD UNIQUE KEY `BestellingIndex` (`artikelcode`,`winkelcode`,`medewerkerscode`,`klantcode`) USING BTREE,
+  ADD KEY `FK_Medewerker` (`medewerkerscode`),
+  ADD KEY `FK_Winkel` (`winkelcode`),
+  ADD KEY `FK_Klanten` (`klantcode`);
+
+--
 -- Indexes for table `factuur`
 --
 ALTER TABLE `factuur`
-  ADD PRIMARY KEY (`factuurnummer`);
+  ADD PRIMARY KEY (`factuurnummer`),
+  ADD UNIQUE KEY `klant3` (`klantcode`);
+
+--
+-- Indexes for table `factuurregel`
+--
+ALTER TABLE `factuurregel`
+  ADD UNIQUE KEY `FactuurIndex` (`factuurnummer`,`artikelcode`),
+  ADD KEY `FK_Artikel` (`artikelcode`);
+
+--
+-- Indexes for table `klanten`
+--
+ALTER TABLE `klanten`
+  ADD UNIQUE KEY `bestelling1` (`klantcode`);
 
 --
 -- Indexes for table `medewerker`
 --
 ALTER TABLE `medewerker`
-  ADD PRIMARY KEY (`Medewerkerscode`);
+  ADD PRIMARY KEY (`Medewerkerscode`),
+  ADD UNIQUE KEY `medewerkerscode1` (`Medewerkerscode`);
 
 --
 -- Indexes for table `winkel`
@@ -167,7 +205,7 @@ ALTER TABLE `artikel`
 -- AUTO_INCREMENT for table `factuur`
 --
 ALTER TABLE `factuur`
-  MODIFY `factuurnummer` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `factuurnummer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `medewerker`
@@ -180,6 +218,32 @@ ALTER TABLE `medewerker`
 --
 ALTER TABLE `winkel`
   MODIFY `winkelcode` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `bestelling`
+--
+ALTER TABLE `bestelling`
+  ADD CONSTRAINT `FK_Factuurregel` FOREIGN KEY (`artikelcode`) REFERENCES `factuurregel` (`artikelcode`),
+  ADD CONSTRAINT `FK_Klanten` FOREIGN KEY (`klantcode`) REFERENCES `klanten` (`klantcode`),
+  ADD CONSTRAINT `FK_Medewerker` FOREIGN KEY (`medewerkerscode`) REFERENCES `medewerker` (`Medewerkerscode`),
+  ADD CONSTRAINT `FK_Winkel` FOREIGN KEY (`winkelcode`) REFERENCES `winkel` (`winkelcode`);
+
+--
+-- Constraints for table `factuurregel`
+--
+ALTER TABLE `factuurregel`
+  ADD CONSTRAINT `FK_Artikel` FOREIGN KEY (`artikelcode`) REFERENCES `artikel` (`artikelcode`),
+  ADD CONSTRAINT `FK_Factuur` FOREIGN KEY (`factuurnummer`) REFERENCES `factuur` (`Factuurnummer`);
+
+--
+-- Constraints for table `klanten`
+--
+ALTER TABLE `klanten`
+  ADD CONSTRAINT `FK_Klantcode` FOREIGN KEY (`klantcode`) REFERENCES `factuur` (`Klantcode`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
