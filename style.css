@@ -4,32 +4,79 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    background-color: #000000;
+header {
+    width: 100%;
+    height: 81px;
 }
 
-.banner {
+body {
     width: 100%;
     height: 100vh;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-image: linear-gradient(rgba(73, 53, 53, 0.75), rgba(0, 0, 0, 0.75)),
         url(./images/Main-Background.jpg);
     background-size: cover;
     background-position: center;
 }
 
+.body-container {
+    height: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    padding: 3px;
+    background-color: #ccc;
+    color: black;
+}
+
+.column {
+    margin: 2rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 4px;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
 .navbar {
-    width: 85%;
+    width: 100%;
     margin: auto;
-    padding: 35px 0;
-    padding-top: 1px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: grey;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    z-index: 9;
+    background-color: white;
+    color: #f8a3c1
 }
 
 .logo {
-    width: 180px;
+    height: 80px;
     cursor: pointer;
+    margin-left: 150px;
+}
+
+.navbar-menu {
+    margin-right: 100px;
 }
 
 .navbar ul li {
@@ -41,14 +88,15 @@ body {
 
 .navbar ul li a {
     text-decoration: none;
-    color: #fff;
+    color: rgb(182, 182, 182);
+    font-size: 1.2rem;
 }
 
 .navbar ul li::after {
     content: "";
     height: 3px;
     width: 0;
-    background: #a833b0;
+    background: #e41d76;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -71,6 +119,8 @@ body {
 .content h1 {
     font-size: 70px;
     margin-top: 80px;
+    display: flex;
+    justify-content: center;
 }
 
 .content p {
@@ -86,7 +136,7 @@ button {
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #a833b0;
+    border: 2px solid #e41d76;
     background: transparent;
     color: #fff;
     cursor: pointer;
@@ -95,7 +145,7 @@ button {
 }
 
 span {
-    background: #a833b0;
+    background: #e41d76;
     height: 100%;
     width: 0;
     border-radius: 25px;
@@ -226,7 +276,7 @@ label {
     color: white;
     padding: 5px;
     font-size: 15px;
-    border-color: #a833b0;
+    border-color: #e41d76;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
@@ -263,7 +313,7 @@ label {
 }
 
 .dropdown:hover .dropbtn {
-    background-color: #a833b0;
+    background-color: #e41d76;
 }
 
 /* login en Sign up pages */
@@ -319,13 +369,13 @@ input:hover,
 
 
 input[type=submit] {
-    background-color: #a833b0;
+    background-color: #e41d76;
     color: white;
     cursor: pointer;
 }
 
 input[type=submit]:hover {
-    background-color: #75257a;
+    background-color: #e41d76;
     transition: 0.5s;
 }
 
@@ -375,7 +425,7 @@ input[type=submit]:hover {
     align-items: center;
     margin: auto;
     width: 60%;
-    background-color: #a833b0;
+    background-color: #e41d76;
     border-radius: 0px 0px 4px 4px;
 }
 
@@ -621,7 +671,7 @@ button.button-reservering:hover {
     margin-top: 50px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #a833b0;
+    border: 2px solid #e41d76;
     background: transparent;
     color: #fff;
     cursor: pointer;
@@ -739,7 +789,7 @@ button.button-reservering:hover {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 2px solid #a833b0;
+    border: 2px solid #e41d76;
     margin: 5% auto 0 auto;
     text-align: center;
 }
@@ -770,7 +820,7 @@ button.button-reservering:hover {
 }
 
 .single-price:hover {
-    background: #a833b0;
+    background: #e41d76;
     color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 1);
     transform-style: scale(1.1);
@@ -784,7 +834,7 @@ button.button-reservering:hover {
 
 .single-price a {
     text-decoration: none;
-    background: #a833b0;
+    background: #e41d76;
     color: #fff;
     padding: 10px 60px;
     display: inline-block;
