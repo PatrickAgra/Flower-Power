@@ -35,22 +35,124 @@
                                 <p class="success"><?php echo $_GET['success']; ?></p>
                             <?php } ?>
 
-                            <label class="loginlabels">Name</label>
                             <?php 
                             if (isset($_GET['name'])) { ?>
-                                <input type="text" 
-                                name="name" 
-                                placeholder="Voornaam"
-                                value="<?php echo $_GET['name']; ?>" >
+                                <div>
+                                    <label class="loginlabels">Voornaam</label>
+                                    <input type="text"
+                                    name="name"
+                                    placeholder="Voornaam"
+                                    value="<?php echo $_GET['name']; ?>" >
+                                </div>
                             <?php } else { ?>
-                                <input type="text" 
-                                name="name" 
-                                placeholder="Voornaam">
+                                <div>
+                                    <label class="loginlabels">Voornaam</label>
+                                    <input type="text"
+                                    name="name"
+                                    placeholder="Voornaam">
+                                </div>
+                            <?php }?>
+                                <div>
+                                    <label class="loginlabels">Tussenvoegsels<label>
+                                    <input type="text" 
+                                    name="prefixes" 
+                                    placeholder="Tussenvoegsels">
+                                </div>
+                            <?php
+                            if (isset($_GET['surname'])) { ?>
+                                <div>
+                                <label class="loginlabels">Achternaam</label>
+                                    <input type="text" 
+                                    name="surname" 
+                                    placeholder="achternaam"
+                                    value="<?php echo $_GET['surname']; ?>" >
+                                </div>
+                            <?php } else { ?>
+                                <div>
+                                    <label class="loginlabels">Achternaam</label>
+                                    <input type="text" 
+                                    name="surname" 
+                                    placeholder="Achternaam">
+                                </div>
+                            <?php }?>
+                                <div>
+                                    <label class="loginlabels">E-mail</label>
+                                    <input type="email"
+                                    name="email" 
+                                    placeholder="E-mail">
+                                </div>
+                            <?php 
+                            if (isset($_GET['adress'])) { ?>
+                                <div>
+                                    <label class="loginlabels">Adres</label>
+                                    <input type="text"  
+                                    name="adress" 
+                                    placeholder="Adres"
+                                    value="<?php echo $_GET['adress']; ?>" >
+                                </div>
+                            <?php } else { ?>
+                                <div>
+                                    <label class="loginlabels">Adres</label>
+                                    <input type="text" 
+                                    name="adress" 
+                                    placeholder="Adres">
+                                </div>
+                            <?php }?>
+                            <?php 
+                            if (isset($_GET['postalcode'])) { ?>
+                                <div>
+                                    <label class="loginlabels">Postcode</label>
+                                    <input type="text"  
+                                    name="postalcode" 
+                                    placeholder="Postcode"
+                                    value="<?php echo $_GET['postalcode']; ?>" >
+                                </div>
+                            <?php } else { ?>
+                                <div>
+                                    <label class="loginlabels">Postcode</label>
+                                    <input type="text" 
+                                    name="postalcode"
+                                    placeholder="Postcode">
+                                </div>
+                            <?php }?>
+                            <?php 
+                            if (isset($_GET['place'])) { ?>
+                                <div>
+                                    <label class="loginlabels">Woonplaats</label>
+                                    <input type="text"  
+                                    name="place" 
+                                    placeholder="Woonplaats"
+                                    value="<?php echo $_GET['place']; ?>" >
+                                </div>
+                            <?php } else { ?>
+                                <div>
+                                    <label class="loginlabels">Woonplaats</label>
+                                    <input type="text" 
+                                    name="place" 
+                                    placeholder="Woonplaats">
+                                </div>
+                            <?php }?>
+                            <?php
+                            if (isset($_GET['place'])) { ?>
+                                <div>
+                                    <label class="loginlabels">Geboortedatum</label>
+                                    <input type="date"  
+                                    name="birthdate" 
+                                    placeholder="Geboortedatum"
+                                    value="<?php echo $_GET['place']; ?>" >
+                                </div>
+                            <?php } else { ?>
+                                <div>
+                                    <label class="loginlabels">Geboortedatum</label>
+                                    <input type="date" 
+                                    name="birthdate" 
+                                    placeholder="Geboortedatum">
+                                </div>
                             <?php }?>
                             <?php 
                             if (isset($_GET['uname'])) { ?>
                                 <div>
-                                    <label class="loginlabels">Username</label>
+                                    <label class="loginlabels">Gebruikersnaam</label>
                                     <input type="text" 
                                     id="uname" 
                                     name="uname" 
@@ -59,7 +161,7 @@
                                 </div>
                             <?php } else { ?>
                                 <div>
-                                    <label class="loginlabels">Username</label>
+                                    <label class="loginlabels">Gebruikersnaam</label>
                                     <input type="text" 
                                     id="uname" 
                                     name="uname" 
@@ -86,6 +188,7 @@
                 </div>
             </form>
         </div>
+
 
         <div class="bottom-container">
             <div class="row">

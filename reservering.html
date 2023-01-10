@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="style.css">
-    <title>Reservering</title>
+    <title>Reserveren</title>
 </head>
+
 <body>
     <div class="banner">
         <div class="navbar">
@@ -11,88 +13,92 @@
             <ul>
                 <li><a href="homepage.html">Home</a></li>
                 <li><a href="reservering.html">Reserveer Nu</a></li>
-                <li><a href="informatie.html">Informatie</a></li>
                 <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="loginpage.html">Login</a></li>
+                <li><a href="informatie.html">Informatie</a></li>
+                <li><a href="./loginsystem/loginpage.php">Login</a></li>
             </ul>
         </div>
-        
+
         <img class="fietsimg" src="./images/fiets.jpg" alt="">
         <br>
 
         <h1>.</h1>
 
 
-    <form action="process-form.php" method="post">
+        <form action="process-form.php" method="post">
 
-        <div class="elem-group">
-          <label class="label-reservering" for="naam">Jouw Naam</label>
-          <input class="input-reservering" type="text" id="naam" name="naam">  
-        </div>
-        
-        <div class="elem-group">
-            <label class="label-reservering" for="email">Jouw E-mail</label>
-            <input class="input-reservering" type="text" id="email" name="email">
-        </div>
-        
-        <div class="elem-group">
-           <label class="label-reservering" for="telefoonnummer">Jouw telefoonnummer</label>
-           <input class="input-reservering" type="text" id="telefoonnummer" name="telefoonnummer"> 
-        </div>
-        
-        <div class="elem-group">
-            <label  class="label-reservering" for="volwassenen">Aantal Volwassenen</label>
-        <select class="input-reservering"  id="volwassenen" name="volwassenen">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5+ Graag Bellen als u met meer komt!</option>
-        </select>
-        </div>
-        
-        <div class="elem-group">
-            <label class="label-reservering" for="kinderen">Aantal Kinderen</label>
-        <select class="input-reservering" id="kinderen" name="kinderen">
-            <option value="0" selected>0</option>
-            <option value="1" >1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5+ Graag Bellen als u met meer komt!</option>
-        </select>
-        </div>
-        
-        <div class="elem-group">
-            <label class="label-reservering"  for="checkin">Check in Datum</label>
-            <input class="input-reservering" type="date" id="checkin-date" name="checkin" required>
-        </div>
-        
-        <div class="elem-group">
-            <label class="label-reservering" for="checkout">Uit Check Datum</label>
-            <input class="input-reservering" type="date" id="checkout-date" name="checkout" required>
-        </div>
-        
-        <div class="elem-group">
-            <label class="label-reservering" for="fietsreservering">Kies Uw Type Reservering</label>
-        <select class="input-reservering" id="fietsreservering" name="fietsreservering">
-            <option value="1">4 uur - 15 euro p.p (8:00 t/m 18:00)</option>
-            <option value="2">2,5 uur Fiets Tour - 10 euro p.p (max 10 pers. 10:00 of 15:00) </option>
-        </select>
-        </div>
-        
+            <div class="elem-group">
+                <label class="label-reservering" for="naam">Jouw Naam</label>
+                <input class="input-reservering" type="text" id="naam" name="naam">
+            </div>
 
-        <label>
-            <input type="checkbox" name="terms" id="">
-            <center><p>Ik Accepteer De Termen en Condities</p></center>
-        </label>
+            <div class="elem-group">
+                <label class="label-reservering" for="email">Jouw E-mail</label>
+                <input class="input-reservering" type="text" id="email" name="email">
+            </div>
 
-        <br>
+            <div class="elem-group">
+                <label class="label-reservering" for="telefoonnummer">Jouw telefoonnummer</label>
+                <input class="input-reservering" type="text" id="telefoonnummer" name="telefoonnummer">
+            </div>
 
-        <button class="button-reservering">Boek Nu!</button>
-        
-        
-       
-    </form>
+            <div class="elem-group">
+                <label class="label-reservering" for="volwassenen">Aantal Volwassenen</label>
+                <select class="input-reservering" id="volwassenen" name="volwassenen">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5+ Graag Bellen als u met meer komt!</option>
+                </select>
+            </div>
+
+            <div class="elem-group">
+                <label class="label-reservering" for="kinderen">Aantal Kinderen</label>
+                <select class="input-reservering" id="kinderen" name="kinderen">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5+ Graag Bellen als u met meer komt!</option>
+                </select>
+            </div>
+
+            <div class="elem-group">
+                <label class="label-reservering" for="checkin">Check in Datum</label>
+                <input class="input-reservering" type="date" id="checkin-date" name="checkin" required>
+            </div>
+
+            <div class="elem-group">
+                <label class="label-reservering" for="checkout">Uit Check Datum</label>
+                <input class="input-reservering" type="date" id="checkout-date" name="checkout" required>
+            </div>
+
+            <div class="elem-group">
+                <label class="label-reservering" for="fietsreservering">Kies Uw Type Reservering</label>
+                <select class="input-reservering" id="fietsreservering" name="fietsreservering">
+                    <option value="1">4 uur - 15 euro p.p (8:00 t/m 18:00)</option>
+                    <option value="2">2,5 uur Fiets Tour - 25 euro p.p (max 10 pers. 10:00 of 15:00) </option>
+                </select>
+            </div>
+
+
+            <label>
+                <input type="checkbox" name="terms" id="">
+                <center>
+                    <p>Ik Accepteer De Termen en Condities</p>
+                </center>
+            </label>
+
+            <br>
+
+            <button class="button-reservering">Boek Nu!</button>
+
+            <br>
+
+
+        </form>
 </body>
+
 </html>

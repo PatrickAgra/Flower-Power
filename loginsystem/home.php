@@ -23,14 +23,14 @@ session_start();
             </ul>
         </div>
         <div class="container-login">
-               <h1>Hallo, <?php echo $_SESSION['name'];?></h1>
+               <h1>Hallo, <?php echo $_SESSION['voornaam'];?></h1>
                 <br>
                 <br>
                 <h2>Dit ben jij:</h2>
                 <br>
-                <h3> Gebruikersnaam: <?php echo $_SESSION['user_name'];?> <h3>
+                <h3> Gebruikersnaam: <?php echo $_SESSION['gebruikersnaam'];?> <h3>
                 <br>
-                <h3> Naam: <?php echo $_SESSION['name'];?> <h3>
+                <h3> Naam: <?php echo $_SESSION['voornaam'];?> <h3>
                 <br>
                 <br>
                 <br>
