@@ -1,12 +1,14 @@
 <?php
 
-$dbhost = "localhost";
-$user = "root";
-$password = "";
+$dsn = 'mysql:dbname=flower_power;host=localhost';
+$user = 'root';
+$password = '';
 
-$db_name = "flower_power";
-
-$conn = mysqli_connect($dbhost, $user, $password, $db_name);
-
-
+try {
+	$pdo = new PDO($dsn, $user, $password);
+	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+	echo "PDO error" . $e->getMessage();
+	die();
+}
 ?>

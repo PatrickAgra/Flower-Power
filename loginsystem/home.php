@@ -11,7 +11,6 @@ session_start();
 </head>
 
 <body>
-    <div class="banner">
         <div class="navbar">
             <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
             <ul>
@@ -23,7 +22,7 @@ session_start();
             </ul>
         </div>
         <div class="container-login">
-               <h1>Hallo, <?php echo $_SESSION['voornaam'];?></h1>
+               <h1>Hallo, <?php echo ucfirst($_SESSION['voornaam']);?></h1>
                 <br>
                 <br>
                 <h2>Dit ben jij:</h2>
@@ -48,15 +47,13 @@ session_start();
         <div class="bottom-container">
             <div class="row">
                 <div class="col">
-                    <a href="logout.php" style="color:white" class="btn">Uitloggen</a>
+                    <a href="logout.php?logout=true" style="color:white" class="btn">Uitloggen</a>
                 </div>
                 <div class="col">
                     <a href="#" style="color:white" class="btn">Wachtwoord veranderen?</a>
                 </div>
             </div>
         </div>
-
-    </div>
 </body>
 
 </html>
