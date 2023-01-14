@@ -18,7 +18,7 @@ session_start();
                 <li><a href="../reservering.html">Reserveer Nu</a></li>
                 <li><a href="../prijzen.html">Prijzen</a></li>
                 <li><a href="../informatie.html">Informatie</a></li>
-                <li><a href="loginpage.php">Login</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </div>
         <div class="container-login">
