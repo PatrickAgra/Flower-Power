@@ -11,17 +11,22 @@ session_start();
 </head>
 
 <body>
-    <div class="banner">
-        <div class="navbar">
-            <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
-            <ul>
-                <li><a href="../homepage.html">Home</a></li>
-                <li><a href="../reservering.html">Reserveer Nu</a></li>
-                <li><a href="../prijzen.html">Prijzen</a></li>
-                <li><a href="../informatie.html">Informatie</a></li>
-                <li><a href="loginpage.php">Login</a></li>
-            </ul>
-        </div>
+    <header>
+    <div class="navbar">
+                <a href="homepage.html"><img src="./images/logo.png" class="logo"></a>
+                <div class="navbar-menu">
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="shoppagina.html">Bestel Nu</a></li>
+                        <li><a href="prijzen.html">Prijzen</a></li>
+                        <li><a href="informatie.html">Informatie</a></li>
+                        <li><a href="./loginsystem/loginpage.php">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+    </header>
+    
+        <main>
         <div class="container-login">
                <h1>Hallo, <?php echo $_SESSION['voornaam'];?></h1>
                 <br>
@@ -41,9 +46,11 @@ session_start();
                 <br>
                 <br>
                 <a class="hometext" href="../reservering.html">Reserveer hier een fiets<a>
+
                 
 
         </div>
+        
 
         <div class="bottom-container">
             <div class="row">
@@ -57,6 +64,7 @@ session_start();
         </div>
 
     </div>
+</main>
 </body>
 
 </html>

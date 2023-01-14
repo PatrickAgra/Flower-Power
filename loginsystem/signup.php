@@ -7,17 +7,20 @@
 </head>
 
 <body>
-    <div class="banner">
+    <header>
+        <div class="banner">
         <div class="navbar">
             <a href="homepage.html"><img src="../images/logo.png" class="logo"></a>
             <ul>
                 <li><a href="../homepage.html">Home</a></li>
-                <li><a href="../reservering.html">Reserveer Nu</a></li>
+                <li><a href="../shoppagina.html">Shop Nu</a></li>
                 <li><a href="../prijzen.html">Prijzen</a></li>
                 <li><a href="../informatie.html">Informatie</a></li>
                 <li><a href="loginpage.php">Login</a></li>
             </ul>
         </div>
+    </header>
+        <main>
         <div class="container-login">
             <form action="signup-check.php" method="POST">
                 <div class="row">
@@ -202,6 +205,7 @@
         </div>
 
     </div>
+    </main>
 </body>
 
 </html>

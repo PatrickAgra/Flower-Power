@@ -7,7 +7,8 @@
 </head>
 
 <body>
-    <div class="banner">
+    <header>
+        <div class="banner">
         <div class="navbar">
             <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
             <ul>
@@ -18,6 +19,9 @@
                 <li><a href="loginpage.php">Login</a></li>
             </ul>
         </div>
+    </header>
+    
+        <main>
         <div class="container-login">
             <form action="login.php" method="POST">
                 <div class="row">
@@ -74,6 +78,7 @@
         </div>
 
     </div>
+    </main>
 </body>
 
 </html>
