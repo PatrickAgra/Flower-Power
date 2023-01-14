@@ -102,7 +102,7 @@ if (isset($_POST['submit'])) {
             <a href="homepage.html"><img src="../images/logo.png" class="logo"></a>
             <ul>
                 <li><a href="../homepage.html">Home</a></li>
-                <li><a href="../shoppagina.html">Shop Nu</a></li>
+                <li><a href="../shoppagina.html">Bestel Nu</a></li>
                 <li><a href="../prijzen.html">Prijzen</a></li>
                 <li><a href="../informatie.html">Informatie</a></li>
                 <li><a href="login.php">Login</a></li>
