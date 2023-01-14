@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="purchase.php" method="post">
+        <label for="product">Select Product:</label>
+        <select id="product" name="product">
+            <option value="Product 1">Product 1</option>
+            <option value="Product 2">Product 2</option>
+            <option value="Product 3">Product 3</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1">
+        <input type="submit" value="Purchase">
+    </form>
+    
+</body>
+</html>
