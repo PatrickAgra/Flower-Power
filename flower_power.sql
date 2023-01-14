@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2022 at 12:52 PM
+-- Generation Time: Jan 14, 2023 at 07:05 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -99,15 +99,18 @@ CREATE TABLE `klanten` (
   `woonplaats` varchar(255) NOT NULL,
   `geboortedatum` date NOT NULL,
   `gebruikersnaam` varchar(255) NOT NULL,
-  `wachtwoord` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `klanten`
 --
 
-INSERT INTO `klanten` (`klantcode`, `voornaam`, `tussenvoegsels`, `achternaam`, `email`, `adres`, `postcode`, `woonplaats`, `geboortedatum`, `gebruikersnaam`, `wachtwoord`) VALUES
-(0, 'Jan', '', 'Pieter', 'JanPieter@gmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2000-01-01', 'Janpieter', '123');
+INSERT INTO `klanten` (`klantcode`, `voornaam`, `tussenvoegsels`, `achternaam`, `email`, `adres`, `postcode`, `woonplaats`, `geboortedatum`, `gebruikersnaam`, `password`) VALUES
+(0, 'Jan', '', 'Pieter', 'JanPieter@gmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2000-01-01', 'Janpieter', '123'),
+(0, 'test', '', 'test', 'randomiets@hotmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2023-01-14', 'hoi', '$2y$04$khY00EydW/hi0WFFJ3gHqOXXbCthWKLQs4P4TqudA222uFDUKABwi'),
+(0, 'test2', '', 'test2', 'email@hotmail.com', 'Sesamstraat 123', '1234XY', 'Amsterdam', '2023-01-03', 'Gebruiker', '$2y$04$8yn.dEoWKr6QIbX2ojfkjen5/FzWQueI5LBSOZ4PfOHuSmKIVMwxy'),
+(0, 'hoi1', '', 'hoi2', 'test@hotmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2023-01-19', 'hoihoihoi', '$2y$04$1KYZBT2KpmeE8c1cE5Wl3uOwZRSPDyoXLiigh/o0iXEcjNsLxntxK');
 
 -- --------------------------------------------------------
 
@@ -173,12 +176,6 @@ ALTER TABLE `factuurregel`
   ADD KEY `FK_Artikel` (`artikelcode`);
 
 --
--- Indexes for table `klanten`
---
-ALTER TABLE `klanten`
-  ADD UNIQUE KEY `bestelling1` (`klantcode`);
-
---
 -- Indexes for table `medewerker`
 --
 ALTER TABLE `medewerker`
@@ -238,12 +235,6 @@ ALTER TABLE `bestelling`
 ALTER TABLE `factuurregel`
   ADD CONSTRAINT `FK_Artikel` FOREIGN KEY (`artikelcode`) REFERENCES `artikel` (`artikelcode`),
   ADD CONSTRAINT `FK_Factuur` FOREIGN KEY (`factuurnummer`) REFERENCES `factuur` (`Factuurnummer`);
-
---
--- Constraints for table `klanten`
---
-ALTER TABLE `klanten`
-  ADD CONSTRAINT `FK_Klantcode` FOREIGN KEY (`klantcode`) REFERENCES `factuur` (`Klantcode`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
