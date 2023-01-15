@@ -11,6 +11,7 @@ session_start();
 </head>
 
 <body>
+    <header>
         <div class="navbar">
             <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
             <ul>
@@ -20,7 +21,9 @@ session_start();
                     <li><a href="../loginsystem/login.php">Login</a></li>
                 </ul>
         </div>
-        <div class="container-login">
+    </header>
+        <main>
+             <div class="container-login">
                <h1>Hallo, <?php echo ucfirst($_SESSION['voornaam']);?></h1>
                 <br>
                 <br>
@@ -38,7 +41,7 @@ session_start();
                 <a class="hometext" href="../prijzen.html">Bekijk de actuele deals bij jou passen<a>
                 <br>
                 <br>
-                <a class="hometext" href="../reservering.html">Reserveer hier een fiets<a>
+                <a class="hometext" href="../productpagina.html">Koop vandaag nog een bosje bloemen<a>
                 
 
         </div>
@@ -53,6 +56,61 @@ session_start();
                 </div>
             </div>
         </div>
+        </main>
+
+        <footer>
+        <div class="footer">
+            <div class="column">
+                <div class="title">Mijn gegevens</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="title">Service</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="title">Contact</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="title">Informatie</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="title">Categorie&#235;n</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+       
 </body>
 
 </html>

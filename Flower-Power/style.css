@@ -328,10 +328,10 @@ label {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    width: 60%;
+    width: 50%;
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 20px 0 30px 0;
+    padding: 30px 0 30px 0;
 }
 
 
@@ -393,6 +393,7 @@ input[type=submit]:hover {
 }
 
 
+
 .row:after {
     content: "";
     display: table;
@@ -429,7 +430,7 @@ input[type=submit]:hover {
     align-items: center;
     margin: auto;
     margin-bottom: 50px;
-    width: 60%;
+    width: 50%;
     background-color: #e41d76;
     border-radius: 0px 0px 4px 4px;
 }
@@ -476,8 +477,16 @@ input[type=submit]:hover {
     margin: 20px auto;
 }
 
-.hometext {
-    text-decoration: none;
+
+
+a.hometext {
+    text-decoration: wavy;
+    color: black; /* initial color of the text */
+    transition: color 0.2s; /* smooth transition over 0.2 seconds */
+}
+
+a.hometext:hover {
+    color: #e41d76; /* color of the text when hovered over */
 }
 
 
@@ -685,7 +694,7 @@ button.button-reservering:hover {
 }
 
 .buybuttonthanks:hover {
-    background-color: #75257a;
+    background-color: #e41d76;
     transition: 0.5s;
 }
 
@@ -942,4 +951,41 @@ button.button-reservering:hover {
 
 .sectiontest1 h1 {
     margin-top: 10px;
+}
+
+.thankspar {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.btn btn-primary {
+    color: black;
+}
+
+.button-login {
+    width: 143px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #e41d76;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-login a {
+    color: white;
+    text-decoration: none;
+}
+
+.form-group{
+    margin-top: 20px;
+}
+
+.form-group label{
+    color: black;
 }
