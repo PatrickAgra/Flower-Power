@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2023 at 07:05 PM
+-- Generation Time: Jan 19, 2023 at 02:13 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -31,9 +31,17 @@ CREATE TABLE `artikel` (
   `artikelcode` int(255) NOT NULL,
   `artikel` varchar(255) NOT NULL,
   `prijs` decimal(10,0) NOT NULL,
+  `omschrijving` text NOT NULL,
   `foto` varchar(255) NOT NULL,
-  `omschrijving` text NOT NULL
+  `bestand` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `artikel`
+--
+
+INSERT INTO `artikel` (`artikelcode`, `artikel`, `prijs`, `omschrijving`, `foto`, `bestand`) VALUES
+(1, 'bloemen1', '50', 'Een mooi bouquet', 'foto.jpg', 'foto.pdf');
 
 -- --------------------------------------------------------
 
@@ -120,12 +128,21 @@ INSERT INTO `klanten` (`klantcode`, `voornaam`, `tussenvoegsels`, `achternaam`, 
 
 CREATE TABLE `medewerker` (
   `Medewerkerscode` int(255) NOT NULL,
-  `voorletters` varchar(255) NOT NULL,
-  `voorvoegsels` varchar(10) NOT NULL,
+  `voornaam` varchar(255) NOT NULL,
+  `tussenvoegsels` varchar(10) NOT NULL,
   `achternaam` varchar(255) NOT NULL,
-  `gebruikersnaam` varchar(36) NOT NULL,
-  `wachtwoord` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `medewerker`
+--
+
+INSERT INTO `medewerker` (`Medewerkerscode`, `voornaam`, `tussenvoegsels`, `achternaam`, `email`, `password`) VALUES
+(2, 'hoi1', '', 'hoi2', 'email@hotmail.com', '$2y$04$3r3CuaplBGpzW1wwKscEEu13P7807TZzMw/U1iaPWjalvh5KSpB0q'),
+(3, 'Patrick', '', 'Agramonte', 'testemail@hotmail.com', '$2y$04$FOaNmn6kso2ip43uHCtkNOqu4WE9U3NiWu7CDa07B7Ef5dXjwZoGC'),
+(4, 'iemand', '', 'achternaam', 'stefan@email.com', '$2y$04$4g7DPj9z2PnG05nggi1FpOasrG5jWNH/4Mb9UxX8WRBpjhlPUZMxu');
 
 -- --------------------------------------------------------
 
@@ -179,7 +196,6 @@ ALTER TABLE `factuurregel`
 -- Indexes for table `medewerker`
 --
 ALTER TABLE `medewerker`
-  ADD PRIMARY KEY (`Medewerkerscode`),
   ADD UNIQUE KEY `medewerkerscode1` (`Medewerkerscode`);
 
 --
@@ -196,7 +212,7 @@ ALTER TABLE `winkel`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikelcode` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `artikelcode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `factuur`
@@ -208,7 +224,7 @@ ALTER TABLE `factuur`
 -- AUTO_INCREMENT for table `medewerker`
 --
 ALTER TABLE `medewerker`
-  MODIFY `Medewerkerscode` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `Medewerkerscode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `winkel`
@@ -235,6 +251,12 @@ ALTER TABLE `bestelling`
 ALTER TABLE `factuurregel`
   ADD CONSTRAINT `FK_Artikel` FOREIGN KEY (`artikelcode`) REFERENCES `artikel` (`artikelcode`),
   ADD CONSTRAINT `FK_Factuur` FOREIGN KEY (`factuurnummer`) REFERENCES `factuur` (`Factuurnummer`);
+
+--
+-- Constraints for table `klanten`
+--
+ALTER TABLE `klanten`
+  ADD CONSTRAINT `FK_Klantcode` FOREIGN KEY (`klantcode`) REFERENCES `factuur` (`Klantcode`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
