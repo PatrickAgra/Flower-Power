@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 19, 2023 at 02:13 AM
+-- Generation Time: Jan 19, 2023 at 11:18 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -32,16 +32,18 @@ CREATE TABLE `artikel` (
   `artikel` varchar(255) NOT NULL,
   `prijs` decimal(10,0) NOT NULL,
   `omschrijving` text NOT NULL,
-  `foto` varchar(255) NOT NULL,
-  `bestand` varchar(255) NOT NULL
+  `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `artikel`
 --
 
-INSERT INTO `artikel` (`artikelcode`, `artikel`, `prijs`, `omschrijving`, `foto`, `bestand`) VALUES
-(1, 'bloemen1', '50', 'Een mooi bouquet', 'foto.jpg', 'foto.pdf');
+INSERT INTO `artikel` (`artikelcode`, `artikel`, `prijs`, `omschrijving`, `foto`) VALUES
+(7, 'Rode Tulpen', '23', 'Lorem ipsum.', 'rodetulpen.jpg'),
+(8, 'Witte Tulpen', '23', 'Lorem ipsum.', 'wittetulpen.jpg'),
+(9, 'Groot Hart', '29', 'Lorem ipsum.', 'groothart.jpg'),
+(10, 'Kleurrijke Tulpen', '25', 'Lorem ispum', 'kleurrijketulpen.jpg');
 
 -- --------------------------------------------------------
 
@@ -212,7 +214,7 @@ ALTER TABLE `winkel`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikelcode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `artikelcode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `factuur`

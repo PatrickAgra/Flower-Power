@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once('db_connect.php');
+
+require_once('../db_connect.php');
 
 if (isset($_POST['submit'])) {
     if (isset($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['password']) && !empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['password'])) {
@@ -96,19 +97,22 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <header>
-        <div class="banner">
-        <div class="navbar">
-            <a href="homepage.html"><img src="../images/logo.png" class="logo"></a>
-            <ul>
-                <li><a href="../homepage.html">Home</a></li>
-                <li><a href="../shoppagina.html">Bestel Nu</a></li>
-                <li><a href="../prijzen.html">Prijzen</a></li>
-                <li><a href="../informatie.html">Informatie</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </div>
-    </header>
+<header>
+    <div class="banner">
+            <div class="navbar">
+                <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
+                <div class="navbar-menu">
+                    <ul>
+                        <li><a href="../homepage.html">Home</a></li>
+                        <li><a href="../shoppagina.php">Bestel Nu</a></li>
+                        <li><a href="../informatie.html">Informatie</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="home.php">Jouw Profiel</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</header>
         <main>
         <div class="container-login">
 	<div class="row h-100 mt-5 justify-content-center align-items-center">
@@ -166,6 +170,9 @@ if (isset($_POST['submit'])) {
 				<div class="form-group">
 				<label for="email">Password:</label>
 					<input type="password" name="password" placeholder="Enter Password" class="form-control" value="<?php echo ($valPassword ?? '')?>">
+				</div>
+                <label for="email">Image:</label>
+					<input type="file" name="image" class="form-control" required accept="image/jpg, image/jpeg, image/png">
 				</div>
 
 				<button type="submit" name="submit" class="btn btn-primary">Submit</button>

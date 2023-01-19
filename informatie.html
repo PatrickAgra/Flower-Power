@@ -1,148 +1,133 @@
-<html>
+</html>
 
 <head>
-    <title>Informatie</title>
+    <title>Flower Power</title>
     <link rel="stylesheet" href="style.css">
-    <script src="test.js"></script>
 </head>
 
 <body>
     <div class="banner">
-        <div class="navbar">
-            <a href="homepage.html"><img src="./images/logo.png" class="logo"></a>
-            <ul>
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="shoppagina.html">Boek Nu</a></li>
-                <li><a href="prijzen.html">Prijzen</a></li>
-                <li><a href="informatie.html">Informatie</a></li>
-                <li><a href="./loginsystem/login.php">Login</a></li>
-            </ul>
-        </div>
+        <header>
+            <div class="navbar">
+                <a href="homepage.html"><img src="./images/logo.png" class="logo"></a>
+                <div class="navbar-menu">
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="shoppagina.php">Bestel Nu</a></li>
+                        <li><a href="informatie.html">Informatie</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="./loginsystem/login.php">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="head-par-info2">
+                <br>
+                <h1 class="header-titel">Zoom in op de niet te missen hoogtepunten</h1>
+                <br>
+                <p class="par-titel">Klik op de pijl hieronder voor foto's </p>
+                <br>
 
-        <div class="head-par-info1">
-            <br>
-            <br>
-            <h1 class="header-titel1">Informatie fietstour</h1>
-            <p class="par-titel">Onze fiets tour duurt 2,5 uur lang en word 2x per dag gehouden om 10.00 en om 15.00. Er
-                kunnen maximaal 10 mensen mee. <br> (fietsen voor deze tour staan apart en zitten niet in de fiets
-                verhuur) kosten voor deze tour bedragen 10 euro per persoon incl fiets.</p>
-            <br>
-            <ol class="list-info">
-                <li>No.1 Barcelona Fietstour</li>
-                <li>Nederlandse gidsen</li>
-                <li>Getipt door ANWB</li>
-                <li>Centraal startpunt</li>
-            </ol>
-            <br>
-            <br>
-            <h1 class="header-titel1">Wat kan je verwachten?</h1>
-            <br>
-            <p class="par-titel">Bij de fietstour zullen wij zeker langs de hoogtepunten als <b>Sagrada Familia,
-                    Ramblas, Gothische Wijk & Barceloneta</b> fietsen!</p>
-            <br>
-            <p class="par-titel">Deze ontspannen Barcelona fietstour met Nederlandse, lokale gids combineert in slechts
-                2,5 uur de belangrijkste must-see highlights (o.a. enkele meesterwerken van Gaudi) met de verborgen
-                schatten van deze prachtige wereldstad. De Nederlandstalige local vertelt de complete historie en
-                achtergronden, zodat je in korte tijd alles over deze topstad te weten komt! Deze Barcelona Fietstour is
-                dankzij de uitstekende infrastructuur (o.a. honderden kilometers fietspad) naast leuk, informatief en
-                ontspannen ook 100% veilig.</p>
-            <br>
-            <br>
-        </div>
-        <div class="head-par-info2">
-            <br>
-            <h1 class="header-titel">Zoom in op de niet te missen hoogtepunten</h1>
-            <br>
-            <p class="par-titel">Klik op de pijl hieronder voor foto's </p>
-            <br>
+                <div class="slideshow-container">
 
-            <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="./images/flower.jpg" style="width:100%">
+                        <div class="text">Bouquette 1</div>
+                    </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="./images/pic1.jpg" style="width:100%">
-                    <div class="text">Sagrada Familia</div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="./images/flower2.jpg" style="width:100%">
+                        <div class="text">Bouquette 2</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="./images/flower3.jpg" style="width:100%">
+                        <div class="text">Bouquette 3</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="./images/pic2.jpg" style="width:100%">
-                    <div class="text">Gothische Wijk</div>
-                </div>
 
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="./images/pic3.jpg" style="width:100%">
-                    <div class="text">Barceloneta</div>
-                </div>
+                <br>
 
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <h1 class="header-titel">Route</h1>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2435.709898946879!2d4.8907035!3d52.374918!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c9a8f9f957%3A0x3d3c8a3f3f7b9d80!2sKalverstraat+74%2C+1012%C2%A0PH+Amsterdam%2C+Netherlands!5e0!3m2!1sen!2sus!4v1611354040689!5m2!1sen!2sus"
+                    width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <br>
+                <h1>Over ons</h1> <br>
+                <p class="par-titel"> Flower Power is een bloemenwinkel die al jaren bekend staat om haar prachtige
+                    selectie van verse bloemen en planten. In de winkel vind je een grote vari&#235teit aan bloemen van
+                    verschillende seizoenen, van klassieke rozen tot exotische orchidee&#235n.
+
+                    De medewerkers van Flower Power zijn bloemenliefhebbers met jarenlange ervaring en kunnen je
+                    adviseren bij het kiezen van de perfecte bloemen voor elke gelegenheid. Of het nu gaat om een
+                    verjaardag, huwelijk, of gewoon om iemand te verrassen, Flower Power heeft altijd de juiste bloemen
+                    in huis.
+
+                    Naast bloemen verkoopt de winkel ook een grote selectie aan bloempotjes, vazen en andere accessoires
+                    om je bloemen mee te decoreren. Er is ook een gratis bezorgservice beschikbaar voor klanten die
+                    liever hun bloemen thuis willen ontvangen.
+
+                    Flower Power is een echte aanrader voor iedereen die op zoek is naar prachtige bloemen en goede
+                    service. Bezoek de winkel en laat je verrassen door de schoonheid van de bloemen.
+                </p>
+                <br>
+                <button class="button-reservering" type="submit"><a class="kutanchor" href="productpagina.html">Show me
+                        the flowers!</a></button>
+                <br>
+                <h1 class="header-titel">Bij FlowerPower denken wij graag met je mee.</h1><br>
+                <p class="par-titel">
+                    Wij hebben een rij aan specialisten waar u blind op kunt vertrouwen en u zo snel mogelijk kunnen
+                    helpen!
+                </p>
+                <p class="par-titel-2"> Komt u er toch niet uit? Laat hieronder uw informatie achter en wij nemen binnen
+                    24
+                    uur contact met u op! </p>
+            </div>
+
+
+            <div class="container">
+                <form>
+
+                    <label for="fname">Voornaam</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Jouw voornaam..">
+
+                    <label for="lname">Achternaam</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Jouw achternaam..">
+
+                    <label for="country">Land</label>
+                    <select id="country" name="country">
+                        <option value="Nederland">Nederland</option>
+                        <option value="Belgie">België</option>
+                        <option value="Duitsland">Spanje</option>
+                    </select>
+
+                    <label for="onderwerp">Onderwerp</label>
+                    <textarea id="onderwerp" name="onderwerp" placeholder="Jouw onderwerp.."
+                        style="height:200px"></textarea>
+
+                    <input type="submit" value="Stuur op">
+
+                </form>
             </div>
             <br>
-
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
-
-            <br>
-
-            <h1 class="header-titel">Route</h1>
-            <img src="./images/maps.PNG" alt="">
-            <br>
-
-            <p class="par-titel">In een klein groepje begeleidt de tourguide je door de stad. Deze expert heeft als
-                inwoner ook veel inside tips, waar je bijvoorbeeld het beste kan eten, relaxen of lokale wijn drinken.
-                Zo bespaart deze populaire Barcelona fietstour je tijd en zorgt ervoor dat je het maximale haalt uit je
-                stedenbezoek. Uiteraard is er op elke plek genoeg tijd om foto´s te maken!
-                Boek deze topexcursie nu online en betaal op locatie!
-                Enthousiast geraakt over deze excursie? De Barcelona fietstour is geheel zonder reserveringskosten,
-                veilig en snel online te boeken.
-                Dus waar wacht je nog op? Reserveer een plekje voor deze geweldige rondleiding door de Catalaanse
-                hoofdstad!
-            </p>
-            <br>
-            <button class="button-reservering" type="submit"><a class="kutanchor" href="reservering.html">Boek Uw
-                    Reservering!</a></button>
-            <br>
-            <h1 class="header-titel">Hier bij Verrasend Barcelona denken wij graag met je mee.</h1><br>
-            <p class="par-titel">
-                Wij hebben een rij aan specialisten waar u blind op kunt vertrouwen en u zo snel mogelijk kunnen helpen!
-            </p>
-            <p class="par-titel-2"> Komt u er toch niet uit? Laat hieronder uw informatie achter en wij nemen binnen 24
-                uur contact met u op! </p>
-        </div>
-
-
-        <div class="container">
-            <form>
-
-                <label for="fname">Voornaam</label>
-                <input type="text" id="fname" name="firstname" placeholder="Jouw voornaam..">
-
-                <label for="lname">Achternaam</label>
-                <input type="text" id="lname" name="lastname" placeholder="Jouw achternaam..">
-
-                <label for="country">Land</label>
-                <select id="country" name="country">
-                    <option value="Nederland">Nederland</option>
-                    <option value="Belgie">België</option>
-                    <option value="Duitsland">Spanje</option>
-                </select>
-
-                <label for="onderwerp">Onderwerp</label>
-                <textarea id="onderwerp" name="onderwerp" placeholder="Jouw onderwerp.."
-                    style="height:200px"></textarea>
-
-                <input type="submit" value="Stuur op">
-
-            </form>
-        </div>
-        <br>
     </div>
+    </main>
     <footer>
         <div class="footer">
             <div class="column">
@@ -195,7 +180,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>

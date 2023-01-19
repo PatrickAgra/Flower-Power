@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('db_connect.php');
+require_once('../db_connect.php');
 
 if (isset($_POST['submit'])) {
 	if (isset($_POST['email'], $_POST['password']) && !empty($_POST['email']) && !empty($_POST['password'])) {
@@ -43,19 +43,20 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <header>
-        <div class="banner">
-        <div class="navbar">
-            <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
-            <ul>
-                <li><a href="../homepage.html">Home</a></li>
-                <li><a href="../shoppagina.html">Bestel Nu</a></li>
-                <li><a href="../prijzen.html">Prijzen</a></li>
-                <li><a href="../informatie.html">Informatie</a></li>
-                <li><a href="login.php">Login</a></li>
-            </ul>
-        </div>
-    </header>
+<header>
+            <div class="navbar">
+                <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
+                <div class="navbar-menu">
+                    <ul>
+                        <li><a href="../homepage.html">Home</a></li>
+                        <li><a href="../shoppagina.php">Bestel Nu</a></li>
+                        <li><a href="../informatie.html">Informatie</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="login.php">Jouw Profiel</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
     <main>
 <div class="container-login">
 	<div class="row h-100 mt-5 justify-content-center align-items-center">

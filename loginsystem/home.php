@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+require_once('../db_connect.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,17 +11,22 @@ session_start();
 </head>
 
 <body>
-        <div class="navbar">
-            <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
-            <ul>
-                <li><a href="../homepage.html">Home</a></li>
-                <li><a href="../shoppagina.html">Bestel Nu</a></li>
-                <li><a href="../prijzen.html">Prijzen</a></li>
-                <li><a href="../informatie.html">Informatie</a></li>
-                <li><a href="loginpage.php">Login</a></li>
-            </ul>
-        </div>
-        <div class="container-login">
+        <header>
+            <div class="navbar">
+                <a href="../homepage.html"><img src="../images/logo.png" class="logo"></a>
+                <div class="navbar-menu">
+                    <ul>
+                        <li><a href="../homepage.html">Home</a></li>
+                        <li><a href="../shoppagina.php">Bestel Nu</a></li>
+                        <li><a href="../informatie.html">Informatie</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="home.php">Jouw Profiel</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main>
+             <div class="container-login">
                <h1>Hallo, <?php echo ucfirst($_SESSION['voornaam']);?></h1>
                 <br>
                 <br>
@@ -39,7 +44,7 @@ session_start();
                 <a class="hometext" href="../prijzen.html">Bekijk de actuele deals bij jou passen<a>
                 <br>
                 <br>
-                <a class="hometext" href="../reservering.html">Reserveer hier een fiets<a>
+                <a class="hometext" href="../productpagina.html">Koop vandaag nog een bosje bloemen<a>
                 
 
         </div>
@@ -54,6 +59,61 @@ session_start();
                 </div>
             </div>
         </div>
+        </main>
+
+        <footer>
+        <div class="footer">
+            <div class="column">
+                <div class="title">Mijn gegevens</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="title">Service</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="title">Contact</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="title">Informatie</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+            <div class="column">
+                <div class="title">Categorie&#235;n</div>
+                <ul>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                    <li>Ipsum</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+       
 </body>
 
 </html>
