@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2022 at 12:52 PM
+-- Generation Time: Jan 19, 2023 at 02:13 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -31,9 +31,17 @@ CREATE TABLE `artikel` (
   `artikelcode` int(255) NOT NULL,
   `artikel` varchar(255) NOT NULL,
   `prijs` decimal(10,0) NOT NULL,
+  `omschrijving` text NOT NULL,
   `foto` varchar(255) NOT NULL,
-  `omschrijving` text NOT NULL
+  `bestand` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `artikel`
+--
+
+INSERT INTO `artikel` (`artikelcode`, `artikel`, `prijs`, `omschrijving`, `foto`, `bestand`) VALUES
+(1, 'bloemen1', '50', 'Een mooi bouquet', 'foto.jpg', 'foto.pdf');
 
 -- --------------------------------------------------------
 
@@ -99,15 +107,18 @@ CREATE TABLE `klanten` (
   `woonplaats` varchar(255) NOT NULL,
   `geboortedatum` date NOT NULL,
   `gebruikersnaam` varchar(255) NOT NULL,
-  `wachtwoord` varchar(255) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `klanten`
 --
 
-INSERT INTO `klanten` (`klantcode`, `voornaam`, `tussenvoegsels`, `achternaam`, `email`, `adres`, `postcode`, `woonplaats`, `geboortedatum`, `gebruikersnaam`, `wachtwoord`) VALUES
-(0, 'Jan', '', 'Pieter', 'JanPieter@gmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2000-01-01', 'Janpieter', '123');
+INSERT INTO `klanten` (`klantcode`, `voornaam`, `tussenvoegsels`, `achternaam`, `email`, `adres`, `postcode`, `woonplaats`, `geboortedatum`, `gebruikersnaam`, `password`) VALUES
+(0, 'Jan', '', 'Pieter', 'JanPieter@gmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2000-01-01', 'Janpieter', '123'),
+(0, 'test', '', 'test', 'randomiets@hotmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2023-01-14', 'hoi', '$2y$04$khY00EydW/hi0WFFJ3gHqOXXbCthWKLQs4P4TqudA222uFDUKABwi'),
+(0, 'test2', '', 'test2', 'email@hotmail.com', 'Sesamstraat 123', '1234XY', 'Amsterdam', '2023-01-03', 'Gebruiker', '$2y$04$8yn.dEoWKr6QIbX2ojfkjen5/FzWQueI5LBSOZ4PfOHuSmKIVMwxy'),
+(0, 'hoi1', '', 'hoi2', 'test@hotmail.com', 'Sesamstraat 123', '1234AB', 'Amsterdam', '2023-01-19', 'hoihoihoi', '$2y$04$1KYZBT2KpmeE8c1cE5Wl3uOwZRSPDyoXLiigh/o0iXEcjNsLxntxK');
 
 -- --------------------------------------------------------
 
@@ -117,12 +128,21 @@ INSERT INTO `klanten` (`klantcode`, `voornaam`, `tussenvoegsels`, `achternaam`, 
 
 CREATE TABLE `medewerker` (
   `Medewerkerscode` int(255) NOT NULL,
-  `voorletters` varchar(255) NOT NULL,
-  `voorvoegsels` varchar(10) NOT NULL,
+  `voornaam` varchar(255) NOT NULL,
+  `tussenvoegsels` varchar(10) NOT NULL,
   `achternaam` varchar(255) NOT NULL,
-  `gebruikersnaam` varchar(36) NOT NULL,
-  `wachtwoord` varchar(255) NOT NULL
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `medewerker`
+--
+
+INSERT INTO `medewerker` (`Medewerkerscode`, `voornaam`, `tussenvoegsels`, `achternaam`, `email`, `password`) VALUES
+(2, 'hoi1', '', 'hoi2', 'email@hotmail.com', '$2y$04$3r3CuaplBGpzW1wwKscEEu13P7807TZzMw/U1iaPWjalvh5KSpB0q'),
+(3, 'Patrick', '', 'Agramonte', 'testemail@hotmail.com', '$2y$04$FOaNmn6kso2ip43uHCtkNOqu4WE9U3NiWu7CDa07B7Ef5dXjwZoGC'),
+(4, 'iemand', '', 'achternaam', 'stefan@email.com', '$2y$04$4g7DPj9z2PnG05nggi1FpOasrG5jWNH/4Mb9UxX8WRBpjhlPUZMxu');
 
 -- --------------------------------------------------------
 
@@ -173,16 +193,9 @@ ALTER TABLE `factuurregel`
   ADD KEY `FK_Artikel` (`artikelcode`);
 
 --
--- Indexes for table `klanten`
---
-ALTER TABLE `klanten`
-  ADD UNIQUE KEY `bestelling1` (`klantcode`);
-
---
 -- Indexes for table `medewerker`
 --
 ALTER TABLE `medewerker`
-  ADD PRIMARY KEY (`Medewerkerscode`),
   ADD UNIQUE KEY `medewerkerscode1` (`Medewerkerscode`);
 
 --
@@ -199,7 +212,7 @@ ALTER TABLE `winkel`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikelcode` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `artikelcode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `factuur`
@@ -211,7 +224,7 @@ ALTER TABLE `factuur`
 -- AUTO_INCREMENT for table `medewerker`
 --
 ALTER TABLE `medewerker`
-  MODIFY `Medewerkerscode` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `Medewerkerscode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `winkel`
